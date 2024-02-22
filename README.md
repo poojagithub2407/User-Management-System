@@ -54,6 +54,38 @@ A user interface for type casting is created, allowing for better data handling 
 - Bootstrap
 - JSON Fake Server
 
+## Running the Project
+
+### Angular Project
+
+To run the Angular project, navigate to the root directory of your project in the terminal and execute the following command:
+
+-- ng serve --open
+
+This command will compile your Angular application and start a development server. The `--open` flag opens the application automatically in your default web browser.
+
+### JSON Fake Server
+
+To run the JSON Fake Server, follow these steps:
+
+1. Install JSON Server globally if you haven't already installed it:
+
+ - npm install -g json-server
+
+2. Create a JSON file containing dummy data for your API. Let's say the file is named `db.json`.
+
+3. Start the JSON Fake Server by running the following command in the terminal:
+
+- json-server --watch data.json
+
+
+This command starts the JSON Fake Server and watches the `db.json` file for changes. It serves the JSON data over HTTP as a RESTful API.
+
+Ensure that your Angular application is configured to make HTTP requests to the correct endpoint served by the JSON Fake Server.
+
+
+
+
 ## Conclusion
 
 The User Management System provides a comprehensive solution for managing user information effectively. It offers a user-friendly interface with validation, data passing, and basic styling features. The system can be extended and customized according to specific project requirements.
