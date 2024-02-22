@@ -1,27 +1,59 @@
-# UserManagementSystem
+# <span style="color:orange">User Management System</span>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+## Overview
 
-## Development server
+This project implements a User Management System using Angular. It allows users to create, edit, and delete user information. The system includes modules for user management, components for user creation and listing, validation, data passing, and basic styling.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Modules
 
-## Code scaffolding
+### User Module
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The User Module is responsible for managing user-related functionality. It includes:
 
-## Build
+- **User folder**: Contains module.ts file for routing to the user page.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### User-Upsert Component
 
-## Running unit tests
+The User-Upsert Component features a reactive form with the following fields:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- FirstName
+- LastName
+- Address
+- Email
+- Phone
 
-## Running end-to-end tests
+Validation is applied to all fields, including email validation for the Email field and ensuring the Phone field accepts only 10-digit numbers. On form submission, the data is saved into a list. If the user is new, they are added to the list; if they already exist, their information is updated.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### User-List Component
 
-## Further help
+The User-List Component displays all created user lists in a grid format. It includes columns for Name, Email, Phone, and Action. In the Action column, two buttons (Edit and Delete) are provided. Clicking the Edit button sends the user details to the User-Upsert Component, while clicking the Delete button removes the user from the list.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Validation
+
+The system checks whether the user already exists and displays an "already exists" message if necessary.
+
+## Data Passing
+
+When a user is selected in the User-List component, the DataService is used to pass the selected user to the User-Upsert component. Similarly, when a user is added or updated in the User-Upsert component, the DataService notifies the User-List component to refresh the user list.
+
+## Styling
+
+Basic styling is applied to make the application visually appealing. The system utilizes Bootstrap for styling.
+
+## Integration with JSON Fake Server
+
+The application integrates with JSON Fake Server to provide dummy user data for testing and development purposes. The server responds to HTTP requests with predefined JSON data, simulating a real API.
+
+## Additional Points
+
+A user interface for type casting is created, allowing for better data handling and manipulation. Initially, users are displayed in the grid using a dummy API that features user data.
+
+## Technologies Used
+
+- Angular
+- Bootstrap
+- JSON Fake Server
+
+## Conclusion
+
+The User Management System provides a comprehensive solution for managing user information effectively. It offers a user-friendly interface with validation, data passing, and basic styling features. The system can be extended and customized according to specific project requirements.

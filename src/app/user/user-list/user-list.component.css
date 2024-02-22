@@ -1,5 +1,6 @@
 .container {
   margin-top: 100px;
-  box-shadow: 0 4px 8px rgba(63, 60, 60, 0.5); 
-  padding: 80px;
+  box-shadow: 0 4px 8px rgba(63, 60, 60, 0.5);
+  width: 80%;
+  padding: 30px;
 }
