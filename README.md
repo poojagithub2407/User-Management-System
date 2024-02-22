@@ -2,7 +2,10 @@
 
 
 ## Snapshot of Project
+![user-list](https://github.com/poojagithub2407/User-Management-System/assets/96479230/c6300383-8466-4151-84b9-d5ac8a28edf6)
 ![user](https://github.com/poojagithub2407/User-Management-System/assets/96479230/84e0e421-429f-4ab5-92b7-4263b696785e)
+![validation](https://github.com/poojagithub2407/User-Management-System/assets/96479230/f0591976-6499-49a1-b856-c6d040ea1c9d)
+![updateUser](https://github.com/poojagithub2407/User-Management-System/assets/96479230/e66c1d3a-bfec-4d0b-9edd-6ebea4bc42bd)
 
 
 ## Overview
