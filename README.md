@@ -18,10 +18,6 @@
 
 ![updateUser](https://github.com/poojagithub2407/User-Management-System/assets/96479230/e66c1d3a-bfec-4d0b-9edd-6ebea4bc42bd)
 
-## Overview
-
-This project implements a User Management System using Angular. It allows users to create, edit, and delete user information. The system includes modules for user management, components for user creation and listing, validation, data passing, and basic styling.
-
 ## Setup of Project
 
 ### Angular Project
@@ -55,6 +51,10 @@ Ensure that your Angular application is configured to make HTTP requests to the 
 - Angular
 - Bootstrap
 - JSON Fake Server
+
+## Overview
+
+This project implements a User Management System using Angular. It allows users to create, edit, and delete user information. The system includes modules for user management, components for user creation and listing, validation, data passing, and basic styling.
 
 ## Modules
 
