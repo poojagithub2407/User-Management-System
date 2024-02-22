@@ -33,8 +33,7 @@ export class UserServiceService {
   }
 
   userExists(email: string): Observable<boolean> {
-    return this.getUsers().pipe(
-      map((users: any[]) =>
+    return this.getUsers().pipe(      map((users: any[]) =>
         users.some((user: { email: string }) => user.email === email)
       )
     );
