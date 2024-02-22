@@ -1,5 +1,10 @@
 # <span style="color:orange">User Management System</span>
 
+
+## Snapshot of Project
+![user](https://github.com/poojagithub2407/User-Management-System/assets/96479230/84e0e421-429f-4ab5-92b7-4263b696785e)
+
+
 ## Overview
 
 This project implements a User Management System using Angular. It allows users to create, edit, and delete user information. The system includes modules for user management, components for user creation and listing, validation, data passing, and basic styling.
@@ -30,11 +35,8 @@ The User-List Component displays all created user lists in a grid format. It inc
 
 ## Validation
 
-The system checks whether the user already exists and displays an "already exists" message if necessary.
+The system checks whether the user already exists and displays an 'already exists' message if necessary. For this, the email ID property serves as the unique identifier.
 
-## Data Passing
-
-When a user is selected in the User-List component, the DataService is used to pass the selected user to the User-Upsert component. Similarly, when a user is added or updated in the User-Upsert component, the DataService notifies the User-List component to refresh the user list.
 
 ## Styling
 

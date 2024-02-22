@@ -17,10 +17,10 @@ export class UserListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.loadUsers();
+    this.getUsers();
   }
 
-  loadUsers(): void {
+  getUsers(): void {
     this.userService.getUsers().subscribe(
       (users) => {
         this.users = users;
@@ -39,7 +39,8 @@ export class UserListComponent implements OnInit {
     this.userService.deleteUser(userId).subscribe(
       (response) => {
         console.log('User deleted successfully:', response);
-        this.loadUsers();
+        alert('User deleted successfully')
+        this.getUsers();
       },
       (error) => {
         console.error('Error deleting user:', error);

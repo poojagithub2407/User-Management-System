@@ -1,68 +1,52 @@
 {
   "user": [
     {
-      "id": 9,
-      "firstName": "werf",
-      "lastName": "werf",
-      "email": "Lucio_Hettinger@annie.com",
-      "phone": "2345678909",
-      "address": "qwerftg"
+      "id": 1,
+      "firstName": "Leanne",
+      "lastName": "Graham",
+      "email": "incere@april.com",
+      "phone": "7707368031",
+      "address": " Gwenborough,2998-3874"
     },
     {
-      "id": 10,
-      "firstName": "werf",
-      "lastName": "wef",
-      "email": "we@gmail.com",
-      "phone": "1234567890",
-      "address": "werfg"
-    },
-    {
-      "id": 11,
-      "firstName": "wef",
-      "lastName": "wef",
-      "email": "we@g",
+      "id": 2,
+      "firstName": "Ervin",
+      "lastName": "Howell",
+      "email": "Shanna@gmail.com",
       "phone": "2345675412",
-      "address": "wedfg"
+      "address": "Wisokyburgh,90566-7771"
     },
     {
-      "id": 12,
-      "firstName": "wer",
-      "lastName": "wer",
+      "id": 3,
+      "firstName": "Clementine",
+      "lastName": "Bauch",
       "email": "wes@gmail.com",
-      "phone": "1234567890",
-      "address": "werfwe"
+      "phone": "4631234447",
+      "address": "McKenziehaven,555919-4257"
     },
     {
-      "id": 13,
-      "firstName": "wedf",
-      "lastName": "wedf",
-      "email": "qwe@gmail.c",
-      "phone": "1234567890",
-      "address": "wedfwer"
+      "id": 4,
+      "firstName": "Patricia",
+      "lastName": "Lebsack",
+      "email": "Julianne@gmail.com",
+      "phone": "9317096231",
+      "address": "Karianne,53919-4257"
     },
     {
-      "id": 14,
-      "firstName": "Pooja",
-      "lastName": "Dayal",
-      "email": "pooja@gmail.com",
-      "phone": "1234567890",
-      "address": "qwertghjk"
-    },
-    {
-      "id": 15,
-      "firstName": "wef",
-      "lastName": "werfg",
-      "email": "werf@gmail.com",
-      "phone": "1234567890",
-      "address": "wertgyh"
-    },
-    {
-      "id": 16,
-      "firstName": "wer",
-      "lastName": "wer",
+      "id": 5,
+      "firstName": "Chelsey",
+      "lastName": "Dietrich",
       "email": "qw@gmail.com",
-      "phone": "1234567890",
-      "address": "wedrf"
+      "phone": "254954128",
+      "address": "Roscoeview,33263"
+    },
+    {
+      "id": 6,
+      "firstName": "Dennis ",
+      "lastName": "Schulist",
+      "email": "wert@Karley_Dach@jasper.com",
+      "phone": "4779358478 ",
+      "address": "Norberto Crossing,3505-1337"
     }
   ]
 }

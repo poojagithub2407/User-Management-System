@@ -13,8 +13,6 @@ export class UserUpsertComponent implements OnInit {
   userForm!: FormGroup;
   userExistsError: boolean = false;
   userId: number = 0;
-  userAddedSuccessfully: boolean = false;
-
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserServiceService,
@@ -35,12 +33,12 @@ export class UserUpsertComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.userId = +params['id'];
       if (this.userId) {
-        this.loadUser(this.userId);
+        this.getUser(this.userId);
       }
     });
   }
 
-  loadUser(userId: number): void {
+  getUser(userId: number): void {
     this.userService.getUserById(userId).subscribe(
       (user) => {
         this.userForm.patchValue(user);
@@ -65,6 +63,7 @@ export class UserUpsertComponent implements OnInit {
       if (this.userId) {
         this.userService.updateUser(userData).subscribe(
           (updatedUser) => {
+            console.log('User updated successfully:', updatedUser);
             alert('User updated successfully:');
             this.router.navigate(['/user-list']);
           },
@@ -76,14 +75,14 @@ export class UserUpsertComponent implements OnInit {
         this.userService.userExists(userData.email).subscribe((exists) => {
           if (exists) {
             this.userExistsError = true;
+            //alert('User already Exit!!!');
+            this.userForm.reset();
           } else {
             this.userExistsError = false;
             this.userService.addUser(userData).subscribe(
               (response) => {
-                this.userAddedSuccessfully = true;
-
                 console.log('User added successfully:', response);
-
+                alert('User added successfully');
                 this.router.navigate(['/user-list']);
               },
               (error) => {

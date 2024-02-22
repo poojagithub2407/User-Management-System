@@ -1,6 +1,9 @@
 <div class="container">
-  <div class="alert alert-primary" role="alert" *ngIf="userAddedSuccessfully">
-    User added successfully
+  <div *ngIf="userExistsError" class="text-danger">
+    <h5 class="text-center fw-bolder p-2 mt-3">
+      User with this email already exists
+    </h5>
+    .
   </div>
   <h2 class="text-center fw-bolder p-2">Create an Account</h2>
   <form class="p-3" [formGroup]="userForm" (ngSubmit)="onSubmit()">
@@ -40,9 +43,8 @@
         Last Name is required
       </div>
     </div>
-    <div class="from-group mb-4">
+    <div class="form-group mb-4">
       <label>Enter Email ID</label>
-
       <input
         type="email"
         class="form-control"
@@ -50,13 +52,20 @@
         formControlName="email"
       />
       <div
-        *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched"
+        *ngIf="userForm.get('email')?.errors?.['required']&& userForm.get('email')?.touched"
         class="text-danger"
       >
-        Email is required and must be valid
+        Email is required
+      </div>
+      <div
+        *ngIf="userForm.get('email')?.errors?.['email'] && userForm.get('email')?.touched"
+        class="text-danger"
+      >
+        Email must be valid
       </div>
     </div>
-    <div class="from-group mb-4">
+
+    <div class="form-group mb-4">
       <label>Enter Phone Number</label>
 
       <input
@@ -65,13 +74,14 @@
         placeholder="Phone number"
         formControlName="phone"
       />
-      <div
-        *ngIf="userForm.get('phone')?.invalid && userForm.get('phone')?.touched"
-        class="text-danger"
-      >
-        Phone number must be 10 digits
+      <div *ngIf="userForm.get('phone')?.errors?.['required'] && userForm.get('phone')?.touched" class="text-danger">
+        Phone number is required
+      </div>
+      <div *ngIf="userForm.get('phone')?.errors?.['pattern'] && userForm.get('phone')?.touched" class="text-danger">
+        Phone must be 10 digits
       </div>
     </div>
+
     <div class="from-group mb-4">
       <label>Enter Address</label>
       <input
@@ -99,7 +109,4 @@
       </button>
     </div>
   </form>
-  <div *ngIf="userExistsError" class="text-danger">
-    User with this email already exists.
-  </div>
 </div>
